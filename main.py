@@ -20,6 +20,13 @@ def find_prime_number(list1):
             if (number % i) == 0:
                 res += 1
     return res
+def remove_number(list1):
+    res = 0
+    number = int(input("Write number for remove "))
+    while number in list1:
+        list1.remove(number)
+        res += 1
+    return "the number of deleted number "+str(res)
 list1 = []
 for i in range(10):
     list1.append(randint(-100,100))
@@ -27,3 +34,8 @@ print(list1)
 print("product list ",product_list(list1))
 print("min list ",min_list(list1))
 print("find primery numbers ",find_prime_number(list1))
+print("list before remove number", end=" ")
+print(list1)
+print(remove_number(list1))
+print("list after remove number", end=" ")
+print(list1)
