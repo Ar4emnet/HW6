@@ -27,9 +27,13 @@ def remove_number(list1):
         list1.remove(number)
         res += 1
     return "the number of deleted number "+str(res)
+def plus_list(list1,list2):
+    return list1+list2
 list1 = []
+list2 = []
 for i in range(10):
     list1.append(randint(-100,100))
+    list2.append(randint(-100,100))
 print(list1)
 print("product list ",product_list(list1))
 print("min list ",min_list(list1))
@@ -39,3 +43,5 @@ print(list1)
 print(remove_number(list1))
 print("list after remove number", end=" ")
 print(list1)
+print("list1+list2", end=" ")
+print(plus_list(list1, list2))
