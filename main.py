@@ -18,7 +18,10 @@ def find_prime_number(list1):
     for number in list1:
         for i in range(number)[2:]:
             if (number % i) == 0:
+                break
+            else:
                 res += 1
+                break
     return res
 def remove_number(list1):
     res = 0
@@ -29,14 +32,11 @@ def remove_number(list1):
     return "the number of deleted number "+str(res)
 def plus_list(list1,list2):
     return list1+list2
-def power_number(list1,):
+def power_number(list1):
     res = []
     numb = int(input("Write power for number "))
     for number in list1:
-        number1 = number
-        for i in range(numb-1):
-            number1 *= number
-        res.append(number1)
+        res.append(number**numb)
     return res
 list1 = []
 list2 = []
